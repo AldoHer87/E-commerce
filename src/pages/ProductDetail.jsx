@@ -41,7 +41,7 @@ const ProductDetail = () => {
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
-                                className="d-block w-100"
+                                className="d-block w-100"   
                                 src={product.images?.[1].url}
                                 alt="Second slide"
                                 style={{ height: 500, objectFit: "contain", padding: "2rem" }}

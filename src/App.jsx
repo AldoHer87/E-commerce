@@ -4,6 +4,7 @@ import { HashRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import AppNavbar from './components/AppNavbar'
 import LoadingScreen from './components/LoadingScreen'
+import ProtectedRoutes from './components/ProtectedRoutes'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import ProductDetail from './pages/ProductDetail'
@@ -22,7 +23,10 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
           <Route path='/product/:id' element={<ProductDetail />} />
-          <Route path='/purchases' element={<Purchases />} />
+          
+          <Route element={<ProtectedRoutes />}>
+            <Route path='/purchases' element={<Purchases />} />
+          </Route>
         </Routes>
       </Container>
     </HashRouter>
