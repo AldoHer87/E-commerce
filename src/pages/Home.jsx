@@ -68,7 +68,7 @@ const Home = () => {
                         {productsList.map(product => (
                             <Col>
                                 <Card key={product.id} style={{cursor: "pointer" }} onClick={() => navigate(`/product/${product.id}`)}>
-                                    <Card.Img variant="top" src={product.images[0].url} style={{ height: 200, objectFit: "contain" }}/>
+                                    <Card.Img variant="top" src={product.images[0].url}  />
                                     <Card.Body>
                                         <Card.Title>{product.title}</Card.Title>
                                         <Card.Text>
