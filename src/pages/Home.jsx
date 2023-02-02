@@ -29,7 +29,7 @@ const Home = () => {
         <div className='home'>
             <Row>
                 {/* Categories */}
-                <Col lg={3}>
+                <Col style={{paddingTop: "3rem", paddingRight: "2rem"}} lg={3}>
                     <ListGroup>
                         {
                             categories.map(category => (
@@ -67,14 +67,11 @@ const Home = () => {
                     <Row xs={1} md={2} lg={3} className="g-4">
                         {productsList.map(product => (
                             <Col>
-                                <Card key={product.id} style={{cursor: "pointer" }} onClick={() => navigate(`/product/${product.id}`)}>
-                                    <Card.Img variant="top" src={product.images[0].url}  />
+                                <Card key={product.id} style={{cursor: "pointer", gap: "2rem", height: "100%" }} onClick={() => navigate(`/product/${product.id}`)}>
+                                    <Card.Img style={{ height: 200, objectFit: "contain", padding: "1rem", height: "200px" }} variant="top" src={product.images[0].url}  />
                                     <Card.Body>
                                         <Card.Title>{product.title}</Card.Title>
-                                        <Card.Text>
-                                            {product.description}
-                                        </Card.Text>
-                                        <Button variant="primary">Add to cart</Button>
+                                        <Card.Title><b>${product.price}</b></Card.Title>
                                     </Card.Body>
                                 </Card>
                             </Col>

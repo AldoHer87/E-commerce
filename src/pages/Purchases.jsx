@@ -21,14 +21,13 @@ const Purchases = () => {
             <Row xs={1} md={2} lg={3} className="g-4    ">
                 {purchases.map(purchases => (
                     <Col>
-                        <Card key={purchases.id} style={{ cursor: "pointer", height: "380px" }} onClick={() => navigate(`/product/${purchases.product.id}`)}>
-                            <Card.Img style={{ height: 200, objectFit: "contain", padding: "1rem", height: "200px" }} variant="top" src={purchases.product.images[0].url} />
+                        <Card key={purchases.id} style={{ cursor: "pointer", height: "300px" }} onClick={() => navigate(`/product/${purchases.product.id}`)}>
+                            <Card.Img style={{ height: 200, objectFit: "contain", padding: "1rem", height: "200px" }} variant="top" src={purchases.product?.images[0].url} />
                             <Card.Body>
-                                <Card.Title>{purchases.product.title}</Card.Title>
+                                <Card.Title>{purchases.product?.title}</Card.Title>
                                 <Card.Text>
-                                    <b>{purchases.product.price}</b>
+                                    <b>{purchases.product?.price}</b>
                                 </Card.Text>
-                                <Button variant="primary">Add to cart</Button>
                             </Card.Body>
                         </Card>
                     </Col>
