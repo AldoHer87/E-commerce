@@ -35,7 +35,7 @@ const PurchasesSidebar = ({ show, handleClose }) => {
                                     <Card.Title>{cart.product?.title}</Card.Title>
                                     <hr />
                                     <Card.Text>
-                                        <b>Price:${cart.product?.price}</b>
+                                        <b>Price: ${cart.product?.price}</b>
                                         <br />
                                         <b>Quantity: {cart.quantity}</b>
                                     </Card.Text>
