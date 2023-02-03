@@ -33,7 +33,8 @@ const Login = () => {
                 <Form.Control 
                     type="email" 
                     placeholder="Enter email"
-                    {...register("email")} 
+                    {...register("email")}
+                    style={{width: "50%"}} 
                 />
                 <Form.Text className="text-muted">
                     We'll never share your email with anyone else.
@@ -46,6 +47,7 @@ const Login = () => {
                     type="password" 
                     placeholder="Password" 
                     {...register("password")}
+                    style={{width: "50%"}} 
                 />
             </Form.Group>
             <br />

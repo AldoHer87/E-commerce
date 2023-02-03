@@ -29,7 +29,8 @@ const Home = () => {
         <div className='home'>
             <Row>
                 {/* Categories */}
-                <Col style={{paddingTop: "3rem", paddingRight: "2rem"}} lg={3}>
+                <Col style={{paddingTop: "2em", paddingRight: "2rem"}} lg={3}>
+                    <h1 style={{fontSize: "20px"}}>Categories</h1>
                     <ListGroup>
                         {
                             categories.map(category => (

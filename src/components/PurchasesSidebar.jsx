@@ -10,6 +10,12 @@ const PurchasesSidebar = ({ show, handleClose }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
+    let total = 0;
+    cart.forEach(product => {
+        const productTotal = Number(product.product.price) * product.quantity;
+        total += productTotal
+    })
+
     useEffect(() => {
         dispatch(getCartThunk());
     }, [])
@@ -42,10 +48,10 @@ const PurchasesSidebar = ({ show, handleClose }) => {
             </Offcanvas.Body>
             <Card className="text-center">
                 <Card.Body>
-                    {/* <Card.Title>Total</Card.Title>
+                    <Card.Title>Total</Card.Title>
                     <Card.Text>
-                        
-                    </Card.Text> */}
+                        <h2>${total.toFixed(2)}</h2>
+                    </Card.Text>
                     <Button onClick={() => dispatch(toPurchasesThunk())} variant="primary" style={{width: "80%"}}>Checkout</Button>
                 </Card.Body>
             </Card>
