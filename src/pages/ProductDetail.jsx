@@ -36,7 +36,7 @@ const ProductDetail = () => {
         <div>
             <h1>{product.brand}</h1>
             <h2>{product.title}</h2>
-            <Row>
+            <Row style={{boxShadow: "5px 5px 5px 5px rgb(0 0 0 / 40%)"}}>
                 {/* Prodduct Description */}
                 <Col lg={7}>
                     <Carousel variant='dark'>
@@ -86,11 +86,11 @@ const ProductDetail = () => {
             <br />
             {/* Releated Products */}
             <div><h3>Releated Products</h3></div>
-            <Row xs={1} md={2} lg={2} className="g-4">
+            <Row  xs={1} md={2} lg={2} className="g-4">
                 {
                     releatedProducts.map(productReleated => (
                     <Col>
-                        <Card style={{height: "100%", textAlign: "center"}} key={productReleated.id} onClick={() => navigate(`/product/${productReleated.id}`)}>
+                        <Card style={{height: "100%", textAlign: "center", boxShadow: "2px 2px 8px rgb(0 0 0 / 20%)"}} key={productReleated.id} onClick={() => navigate(`/product/${productReleated.id}`)}>
                             <Card.Img variant="top" src={productReleated.images?.[0].url} alt="" className='img-fluid' style={{ height: "10rem", objectFit: "contain", textAlign: "right", flexDirection: "row", justifyContent: "right", alignItems: "right", paddingTop: "2rem" }} />
                             <Card.Body>
                                 <Card.Title>{productReleated.title}</Card.Title>

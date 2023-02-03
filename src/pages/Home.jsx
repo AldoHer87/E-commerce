@@ -68,8 +68,9 @@ const Home = () => {
                     <Row xs={1} md={2} lg={3} className="g-4">
                         {productsList.map(product => (
                             <Col>
-                                <Card key={product.id} style={{cursor: "pointer", gap: "2rem", height: "100%" }} onClick={() => navigate(`/product/${product.id}`)}>
-                                    <Card.Img style={{ objectFit: "contain", padding: "1rem", height: "200px" }} variant="top" src={product.images[0].url}  />
+                                <Card key={product.id} style={{cursor: "pointer", gap: "rem", height: "100%", boxShadow: "2px 2px 8px rgb(0 0 0 / 70%)" }} onClick={() => navigate(`/product/${product.id}`)}>
+                                    <Card.Img style={{ objectFit: "contain", paddingTop: "1rem", height: "200px"}} variant="top" src={product.images[0].url}  />
+                                    <hr />
                                     <Card.Body>
                                         <Card.Title>{product.title}</Card.Title>
                                         <Card.Title><b>${product.price}</b></Card.Title>

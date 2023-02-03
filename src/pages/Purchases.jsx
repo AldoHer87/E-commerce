@@ -20,12 +20,13 @@ const Purchases = () => {
             <h1>Purchases</h1>
             <Row xs={1} md={2} lg={3} className="g-4    ">
                 {purchases.map(purchases => (
-                    <Col>
-                        <Card key={purchases.id} style={{ cursor: "pointer", height: "300px" }} onClick={() => navigate(`/product/${purchases.product.id}`)}>
+                    <Col >
+                        <Card key={purchases.id} style={{ cursor: "pointer", height: "350px", boxShadow: "2px 2px 8px rgb(0 0 0 / 20%)", }} onClick={() => navigate(`/product/${purchases.product.id}`)}>
                             <Card.Img style={{ height: 200, objectFit: "contain", padding: "1rem", height: "200px" }} variant="top" src={purchases.product?.images[0].url} />
+                            <hr />
                             <Card.Body>
                                 <Card.Title>{purchases.product?.title}</Card.Title>
-                                <Card.Text>
+                                <Card.Text >
                                     <b>{purchases.product?.price}</b>
                                 </Card.Text>
                             </Card.Body>
